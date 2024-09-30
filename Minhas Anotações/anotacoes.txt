@@ -1,0 +1,23 @@
+#Algoritmo de Hash
+Um algoritmo de hash é uma função que transforma uma entrada (ou "mensagem") de comprimento variável em uma saída de comprimento fixo, geralmente representada como uma sequência de caracteres. O principal objetivo de um algoritmo de hash é garantir a integridade dos dados, ou seja, garantir que a informação não foi alterada.
+
+
+##Sal (Salt)
+Um sal é uma string aleatória que é adicionada à senha antes de ser hashada. O principal objetivo do sal é aumentar a segurança do hash, especialmente contra ataques de tabelas arco-íris e ataques de força bruta.
+
+Como Funciona:
+1.	Quando um usuário cria uma senha, o sistema gera um sal aleatório.
+2.	O sal é concatenado à senha antes de aplicar o algoritmo de hash.
+3.	Tanto o hash da senha quanto o sal devem ser armazenados no banco de dados.
+
+Exemplo Prático
+1.	O usuário cria uma senha: minhaSenha123.
+2.	O sistema gera um sal: R@nd0mS@lt!.
+3.	O sistema concatena a senha e o sal: minhaSenha123R@nd0mS@lt!.
+4.	O sistema aplica um algoritmo de hash, por exemplo, SHA-256, e armazena o hash resultante e o sal no banco de dados.
+
+Resumo
+•	Algoritmos de hash transformam senhas em valores fixos e únicos.
+•	Sal é uma string aleatória adicionada à senha para aumentar a segurança.
+•	O uso de sal e hash juntos ajuda a proteger senhas contra várias ameaças de segurança.
+
