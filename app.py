@@ -6,13 +6,13 @@ import random
 
 app = Flask(__name__)
 
-def gerar_senha(tamanho=4):
+def gerar_senha(tamanho=6):
     # Define os conjuntos de caracteres a serem usados
     letras_maiusculas = string.ascii_uppercase  # Letras maiúsculas (A-Z)
     numeros = string.digits                     # Números (0-9)
     caractere_especial = '*'                    # Caractere especial permitido
-    # Se tamanho for maior que 4, limitamos a 4
-    tamanho = min(tamanho, 4)
+    # Se tamanho for maior que 6, limitamos a 6
+    tamanho = min(tamanho, 6)
 
     # Garantir que a senha terá pelo menos um caractere de cada tipo
     senha = [
